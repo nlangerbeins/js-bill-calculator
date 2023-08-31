@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split the Bill</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Let's Split The Bill!</h1>
+      <div class="container">
+        <form class="form">
+          <div class="form_bill">
+            <p>Bill</p>
+            <input id="bill" type="text" placeholder="Bill" />
+          </div>
+          <div class="form_people">
+            <p>Number of People</p>
+            <input id="people" type="text" placeholder="How many people?" />
+          </div>
+          <div class="form_tip">
+            <p>Did you like our service?</p>
+            <button id="addTip">Add a Tip!</button>
+            <select id="tip" class="select">
+              <option disabled>Select an option</option>
+              <option value="0.30">Great service! 30%</option>
+              <option value="0.20">Good service! 20%</option>
+              <option value="0.10" selected>It was OK! 10%</option>
+              <option value="0.00">No tip today!</option>
+            </select>
+          </div>
+          <div class="form_button">
+            <button id="button">Calculate</button>
+          </div>
+        </form>
+        <div class="totalAmountToPay">
+          <div class="splitedBill">
+            <p>Bill</p>
+            <p>$ <span id="dividedBill"></span> per person</p>
+          </div>
+          <div class="splitedTip">
+            <p>Tip</p>
+            <p>$ <span id="dividedTip"></span> per person</p>
+          </div>
+          <div class="totalAmount">
+            <p>Total</p>
+            <p>$ <span id="billAndTip"></span> per person</p>
+          </div>
+        </div>
+      </div>
+      <button id="buttonReset">RESET</button>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

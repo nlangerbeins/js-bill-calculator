@@ -1,0 +1,260 @@
+@import url(/assets/fonts/fonts.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/assets/img/4.jpeg);
+  background-color: #353535;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: center;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+  text-align: center;
+  font-family: 'nelphim_regular';
+  font-size: 50px;
+}
+
+.container {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background: rgba(130, 132, 134, 0.2);
+  border-radius: 0 70px;
+  color: #fff;
+}
+
+.form {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+  padding: 7px 15px;
+  border-radius: 0 20px;
+  outline-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  background-color: #535252;
+  box-shadow: 0 px 1px #a0a0a0;
+  font-family: 'made_tommylight';
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: rgb(143, 143, 143);
+}
+
+.form_bill,
+.form_people,
+.form_tip {
+  padding: 20px 20px 0;
+}
+
+.form_bill p,
+.form_people p,
+.form_tip p {
+  margin: 0 0 7px;
+  font-size: 20px;
+  font-family: 'made_tommylight';
+}
+
+#tip {
+  display: none;
+}
+
+.select {
+  width: 100%;
+  margin: auto;
+  padding: 3px;
+  border-radius: 10px;
+  outline-color: #000;
+  background-color: #b3b3b3;
+  box-shadow: 0 1px 1px #a0a0a0;
+  color: rgb(41, 41, 41);
+  border: 1px solid #000;
+}
+
+#addTip {
+  padding: 7px 10px;
+  width: 100%;
+  margin: 0 0 5px;
+  border-radius: 10px;
+  color: #b6b671;
+  background-color: rgb(70, 70, 70);
+  box-shadow: 0 1px 1px #a0a0a0;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'made_tommylight';
+}
+
+#addTip:hover {
+  transform: scale(1, 1.1);
+  color: rgb(71, 71, 71);
+  background-color: rgb(209, 209, 209);
+}
+
+.form_button {
+  display: flex;
+  justify-content: center;
+  margin: 30px 10px;
+}
+
+#button {
+  padding: 12px 10px;
+  width: 60%;
+  border-radius: 50px;
+  color: #fff;
+  background-image: linear-gradient(
+    to right,
+    #000000 0%,
+    #434343 51%,
+    #000000 100%
+  );
+  box-shadow: 0 0 10px #eee;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 22px;
+  font-family: 'made_tommylight';
+}
+
+#button:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.totalAmountToPay {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  max-width: 100%;
+}
+
+.splitedBill,
+.splitedTip,
+.totalAmount {
+  background-color: rgba(182, 182, 113, 0.6);
+  padding: 30px 20px;
+  border-radius: 40px 0;
+  color: #000;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  font-family: 'made_tommylight';
+}
+
+.splitedTip {
+  margin: 0 10px;
+}
+
+.splitedBill p:first-of-type,
+.splitedTip p:first-of-type,
+.totalAmount p:first-of-type {
+  padding: 0 0 10px;
+  font-size: 20px;
+}
+
+#dividedBill,
+#dividedTip,
+#billAndTip {
+  font-size: 18px;
+  color: #e4dede;
+}
+
+#buttonReset {
+  width: 300px;
+  margin: 40px 0 20px;
+  padding: 20px 40px;
+  border: 2px solid black;
+  background: none;
+  color: #b6b671;
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+    1px 1px 5px rgb(78, 75, 75);
+  font-size: 20px;
+  font-family: 'made_tommylight';
+  cursor: pointer;
+}
+
+#buttonReset:hover {
+  background-color: rgb(173, 173, 173, 0.4);
+  transition: all 1s ease-in-out;
+}
+
+@media all and (max-width: 800px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  h1 {
+    margin: 30px 10px 20px;
+    font-size: 35px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .form {
+    max-width: 100%;
+  }
+
+  .form_bill p,
+  .form_people p,
+  .form_tip p {
+    font-size: 16px;
+  }
+
+  #addTip {
+    font-size: 16px;
+  }
+
+  #button {
+    font-size: 18px;
+  }
+
+  .totalAmountToPay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .splitedBill,
+  .splitedTip,
+  .totalAmount {
+    padding: 10px 30px;
+    width: 80%;
+  }
+
+  .splitedTip {
+    margin: 10px 0;
+  }
+
+  .splitedBill p:first-of-type,
+  .splitedTip p:first-of-type,
+  .totalAmount p:first-of-type {
+    font-size: 18px;
+  }
+}
